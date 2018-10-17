@@ -1,0 +1,60 @@
+body
+{
+  background: rgb(30,87,153);
+  background: -moz-linear-gradient(top, rgba(30,87,153,1) 0%, rgba(41,137,216,1) 35%, rgba(125,185,232,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 35%,rgba(125,185,232,1) 100%);
+  background: linear-gradient(to bottom, rgba(30,87,153,1) 0%,rgba(41,137,216,1) 35%,rgba(125,185,232,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+}
+
+.custom-input
+{
+  border: none;
+  border-bottom: 1px solid #6c757d;
+  height: 38px;
+  width: 100%;
+  outline: none;
+}
+
+.item
+{
+  overflow: hidden;
+  background-color: #e4e4e4;
+  cursor: pointer;
+}
+
+.item-button
+{
+  position: absolute;
+  top: 0;
+  width: 45px;
+  height: 100%;
+  border: 0;
+  cursor: pointer;
+  transition: left .5s, right .5s
+}
+
+.item-remove
+{
+  right: -45px;
+}
+
+.item:hover > .item-remove
+{
+  right: 0;
+}
+
+.item-done
+{
+  left: -45px;
+}
+
+.item:hover > .item-done
+{
+  left: 0;
+}
+
+#newTask
+{
+  display: none;
+}

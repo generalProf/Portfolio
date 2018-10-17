@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="../assets/bootstrap.css">
+    <link rel="stylesheet" href="../assets/open-iconic/font/css/open-iconic-bootstrap.css">
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-5 offset-4">
+          <div class="todo card shadow">
+            <div class="card-body">
+
+              <h2 class="border-bottom border-dark">{{ header }}</h2>
+
+              <div class="todo-list container mt-4">
+                <div class="row" v-for="(value, key) in list">
+
+                  <div class="col-12 item rounded mb-1 p-2" @click="checkTask">
+
+                    <p class="m-0">{{ value }}</p>
+
+                    <button type="button"
+                            class="btn-danger item-button item-remove"
+                            @click="removeTask(key)">
+                      <span class="oi oi-trash"></span>
+                    </button>
+
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-12 p-2">
+                    <form @submit="newTask" method="post" id="newTask">
+                      <input class="custom-input mb-1"
+                             type="text"
+                             name="task"
+                             v-model="task">
+                    </form>
+                  </div>
+                  <button class="btn btn-light w-100" id="addTask" @click="toggleNewTask">
+                    <span class="oi oi-plus"></span>
+                  </button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../assets/vue.js"></script>
+    <script type="text/javascript" src="../assets/jquery.js"></script>
+    <script type="text/javascript" src="assets/main.js"></script>
+  </body>
+</html>
