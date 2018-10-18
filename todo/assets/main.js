@@ -31,7 +31,7 @@ $todoVue = new Vue({
           $html       = $checked === 'false'? $text: '<s>'+$text+'</s>';
 
       // Check if it's the trash
-      if($selected.closest('button'))
+      if($selected.closest('button').length)
       {
         return false;
       }
