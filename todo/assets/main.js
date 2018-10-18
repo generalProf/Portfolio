@@ -15,8 +15,6 @@ $todoVue = new Vue({
 
         this.task = '';
       }
-
-      // this.toggleNewTask();
     },
     removeTask(task){
       // Remove task from list
